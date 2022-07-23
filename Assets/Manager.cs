@@ -18,23 +18,30 @@ public struct Tile
     public TileDir dir;
     public GameObject thing;
 }
+
 public class Manager : MonoBehaviour
 {
     public Transform cowprefab;
     public Transform stairprefab;
     public Transform floorprefab;
     public Transform wallprefab;
+
+    public Transform toPlace;
+
     public Tile[] board = new Tile[512];
+
     // Start is called before the first frame update
     void Start()
     {
-        for(int i = 0; i < 63; i++)
+        for (int i = 0; i < 63; i++)
         {
             UpdateTile(i, TileType.Platform);
         }
+
         UpdateTile(63, TileType.Stair);
         board[63].dir = TileDir.N;
     }
+
     void UpdateTile(int index, TileType t)
     {
         board[index].type = t;
@@ -44,6 +51,7 @@ public class Manager : MonoBehaviour
             Destroy(board[index].thing);
             board[index].thing = null;
         }
+
         switch (t)
         {
             case TileType.Empty:
@@ -52,7 +60,7 @@ public class Manager : MonoBehaviour
                 thing = Instantiate(floorprefab, vecfromidx(index), rotFromDir(board[index].dir));
                 board[index].thing = thing.gameObject;
                 break;
-            case TileType.Stair: 
+            case TileType.Stair:
                 thing = Instantiate(stairprefab, vecfromidx(index), rotFromDir(board[index].dir));
                 board[index].thing = thing.gameObject;
                 break;
@@ -60,6 +68,7 @@ public class Manager : MonoBehaviour
                 break;
         }
     }
+
     Quaternion rotFromDir(TileDir dir)
     {
         switch (dir)
@@ -76,25 +85,39 @@ public class Manager : MonoBehaviour
                 return default;
         }
     }
+
     public Vector3 vecfromidx(int index)
     {
         return new Vector3(xfromidx(index), yfromidx(index), zfromidx(index)) * 5f;
     }
+
     public int xfromidx(int idx)
     {
         return idx & 7;
     }
+
     public int zfromidx(int idx)
     {
         return idx >> 3 & 7;
     }
+
     public int yfromidx(int idx)
     {
         return idx >> 6 & 7;
     }
+
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Alpha0))
+            toPlace = cowprefab;
+        else if (Input.GetKey(KeyCode.Alpha1))
+            toPlace = floorprefab;
+        else if (Input.GetKey(KeyCode.Alpha2))
+            toPlace = stairprefab;
+        else if (Input.GetKey(KeyCode.Alpha3))
+            toPlace = wallprefab;
         
+        //var blah = Physics.Raycast(Camera.main.transform.position, )
     }
 }
