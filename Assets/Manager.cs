@@ -117,7 +117,14 @@ public class Manager : MonoBehaviour
             toPlace = stairprefab;
         else if (Input.GetKey(KeyCode.Alpha3))
             toPlace = wallprefab;
-        
-        //var blah = Physics.Raycast(Camera.main.transform.position, )
+
+        var didhit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hitinfo);
+
+        if (didhit)
+        {
+            
+        }
+
+
     }
 }
