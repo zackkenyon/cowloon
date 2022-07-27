@@ -15,5 +15,5 @@ public class ButtonBehaviors : MonoBehaviour
     {
         
     }
-    public void myfun(int i) { Debug.Log($"You pushed button {i}!"); }
+    public void myfun(int i) { Manager.Instance.toPlace = Manager.Instance.prefabs[i - 1]; }
 }

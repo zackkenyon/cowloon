@@ -21,15 +21,26 @@ public struct Tile
 
 public class Manager : MonoBehaviour
 {
+    public static Manager Instance;
     public Transform cowprefab;
     public Transform stairprefab;
     public Transform floorprefab;
     public Transform wallprefab;
-
+    public Transform[] prefabs;
     public Transform toPlace;
 
     public Tile[] board = new Tile[512];
-
+    Manager()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Debug.LogError("Tried to make two managers!");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +52,6 @@ public class Manager : MonoBehaviour
         UpdateTile(63, TileType.Stair);
         board[63].dir = TileDir.N;
     }
-
     void UpdateTile(int index, TileType t)
     {
         board[index].type = t;
