@@ -16,8 +16,9 @@ public class ButtonBehaviors : MonoBehaviour
         
     }
     public void myfun(int i) { 
-        Manager.Instance.toPlace = Manager.Instance.prefabs[i - 1];
-        //Manager.Instance.Currenttextmesh.text = Manager.Instance.toPlace.name;
+        Manager.Instance.toPlace = Manager.Instance.prefabs[i];
+        Manager.Instance.toPlaceNum = i;
+        Manager.Instance.Currenttextmesh.text = Manager.Instance.toPlace.name;
         Debug.Log($"you pressed the {i} button");
     }
 }
