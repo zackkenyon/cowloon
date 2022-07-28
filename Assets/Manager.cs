@@ -22,14 +22,12 @@ public struct Tile
 public class Manager : MonoBehaviour
 {
     public static Manager Instance;
-    public Transform cowprefab;
-    public Transform stairprefab;
-    public Transform floorprefab;
-    public Transform wallprefab;
     public Transform[] prefabs;
     public Transform toPlace;
-
+    public TMPro.TextMeshProUGUI Currenttextmesh;
     public Tile[] board = new Tile[512];
+    public GameObject cursorcube;
+    public int cursoridx;
     Manager()
     {
         if (Instance == null)
@@ -67,11 +65,11 @@ public class Manager : MonoBehaviour
             case TileType.Empty:
                 break;
             case TileType.Platform:
-                thing = Instantiate(floorprefab, vecfromidx(index), rotFromDir(board[index].dir));
+                thing = Instantiate(prefabs[0], vecfromidx(index), rotFromDir(board[index].dir));
                 board[index].thing = thing.gameObject;
                 break;
             case TileType.Stair:
-                thing = Instantiate(stairprefab, vecfromidx(index), rotFromDir(board[index].dir));
+                thing = Instantiate(prefabs[1], vecfromidx(index), rotFromDir(board[index].dir));
                 board[index].thing = thing.gameObject;
                 break;
             default:
@@ -117,17 +115,57 @@ public class Manager : MonoBehaviour
     }
 
     // Update is called once per frame
+    /// <summary>
+    /// Run the game.
+    ///     - move the cursor around within the bounds.
+    /// </summary>
     void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha0))
-            toPlace = cowprefab;
-        else if (Input.GetKey(KeyCode.Alpha1))
-            toPlace = floorprefab;
-        else if (Input.GetKey(KeyCode.Alpha2))
-            toPlace = stairprefab;
-        else if (Input.GetKey(KeyCode.Alpha3))
-            toPlace = wallprefab;
-
+        Currenttextmesh.text = $"{cursoridx}";
+        if (Input.GetKeyDown(KeyCode.Comma))
+        {
+            if (yfromidx(cursoridx) + 1 < 8)
+            {
+                cursoridx += 64;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Period))
+        {
+            if (yfromidx(cursoridx) - 1 >= 0)
+            {
+                cursoridx -= 64;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            if (zfromidx(cursoridx) + 1 < 8)
+            {
+                cursoridx += 8;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            if (zfromidx(cursoridx) -1 >= 0)
+            {
+                cursoridx -= 8;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            if (xfromidx(cursoridx) + 1 < 8)
+            {
+                cursoridx += 1;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (xfromidx(cursoridx) - 1 >= 0) 
+            {
+                
+                cursoridx -= 1;
+            }
+        }
+        cursorcube.transform.position = vecfromidx(cursoridx);
         var didhit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hitinfo);
 
         if (didhit)
