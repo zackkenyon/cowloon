@@ -19,17 +19,13 @@ public enum ToPlaceType
     LittleTrough,
     Baby
 }
-public enum TileDir
-{
-    N,S,E,W
-}
 [Serializable]
 public struct Tile
 {
     public TileType type;
-    public TileDir dir;
     public List<GameObject> things;
     public int thingsIHave;
+    public int thingOrientations;
 }
 
 
@@ -47,7 +43,7 @@ public class Manager : MonoBehaviour
     [Header("Materials")]
     public Material goodhighlight;
     public Material badhighlight;
-    
+    public int toPlaceDir;
     Manager()
     {
         if (Instance == null)
@@ -62,54 +58,24 @@ public class Manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < 63; i++)
+        for (int i = 0; i < 64; i++)
         {
-            UpdateTile(i, TileType.Platform);
-        }
-
-        UpdateTile(63, TileType.Stair);
-        board[63].dir = TileDir.N;
-    }
-    void UpdateTile(int index, TileType t)
-    {
-        board[index].type = t;
-        Transform thing;
-        if (board[index].things == null)
-        {
-            board[index].things = new List<GameObject>();
-        }
-
-        switch (t)
-        {
-            case TileType.Empty:
-                break;
-            case TileType.Platform:
-                thing = Instantiate(prefabs[0], vecfromidx(index), rotFromDir(board[index].dir));
-                board[index].things.Add(thing.gameObject);
-                board[index].thingsIHave |= 1 << (int) ToPlaceType.Platform;
-                break;
-            case TileType.Stair:
-                thing = Instantiate(prefabs[1], vecfromidx(index), rotFromDir(board[index].dir));
-                board[index].things.Add(thing.gameObject);
-                board[index].thingsIHave |= 1 << (int) ToPlaceType.Stair;
-
-                break;
-            default:
-                break;
+            Instantiate(prefabs[(int)ToPlaceType.Platform], vecfromidx(i) - 5 * Vector3.up,Quaternion.identity);
         }
     }
 
-    Quaternion rotFromDir(TileDir dir)
+
+    Quaternion rotFromInt(int dir)
     {
         switch (dir)
         {
-            case TileDir.N:
+            case 0:
                 return Quaternion.LookRotation(Vector3.forward);
-            case TileDir.S:
-                return Quaternion.LookRotation(-Vector3.forward);
-            case TileDir.E:
+            case 1:
                 return Quaternion.LookRotation(Vector3.right);
-            case TileDir.W:
+            case 2:
+                return Quaternion.LookRotation(-Vector3.forward);
+            case 3:
                 return Quaternion.LookRotation(-Vector3.right);
             default:
                 return default;
@@ -193,6 +159,11 @@ public class Manager : MonoBehaviour
                 cursoridx -= 1;
             }
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            toPlaceDir++;
+            toPlaceDir %= 4;
+        }
         cursorcube.transform.position = vecfromidx(cursoridx);
         var isOkToPlace = IsOKToPlace((ToPlaceType) toPlaceNum, cursoridx);
 
@@ -205,9 +176,7 @@ public class Manager : MonoBehaviour
         {
             if (isOkToPlace)
             {
-                var thing = Instantiate(toPlace, cursorcube.transform.position, cursorcube.transform.rotation);
-                board[cursoridx].things.Add(thing.gameObject);
-                board[cursoridx].thingsIHave |= 1 << toPlaceNum;
+                PlaceThing((ToPlaceType)toPlaceNum,toPlaceDir,cursoridx);
             }
         }
 
@@ -220,57 +189,86 @@ public class Manager : MonoBehaviour
         }
     }
 
+    private void PlaceThing(ToPlaceType t, int dir, int idx)
+    {
+        var i = (int)t;
+        var thing = Instantiate(prefabs[i], vecfromidx(idx), rotFromInt(dir));
+        board[idx].things.Add(thing.gameObject);
+        board[idx].thingsIHave |= 1 << i;
+        board[idx].thingOrientations |= dir << (2 * i);
+    }
+
+    int indexbelow (int index)
+    {
+        if (index >= 64)
+        {
+            return index - 64;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    int indexabove(int index)
+    {
+        if (index < 512 - 64) 
+        {
+            return index + 64;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    public int typetoint (ToPlaceType t)
+    {
+        return 1 << (int)t;
+    }
+    public bool hastype(ToPlaceType t,int bitvec)
+    {
+        return (typetoint(t) & bitvec) != 0;
+    }
+    public int diroftype(ToPlaceType t, int dirvec)
+    {
+        return  dirvec >> (2 * (int)t) & 3;
+    }
     public bool IsOKToPlace(ToPlaceType t, int idx)
     {
-        var thingsihave = board[idx].thingsIHave;
+        var squarecontents = board[idx].thingsIHave;
         var vec = vecfromidx(idx);
-        
-        if ((thingsihave & (1 << (int) ToPlaceType.Stair)) != 0)
+        //rule 1
+        if (hastype(t, squarecontents) || hastype(ToPlaceType.Stair,squarecontents))
         {
-            Debug.Log("can't place because there's already a stair there");
             return false;
         }
-
-        if ((thingsihave & (1 << (int) ToPlaceType.Platform)) == 0)
+        //rule 2
+        if (t == ToPlaceType.Stair)
         {
-            if ((int) t > (int) ToPlaceType.Stair)
+            if (squarecontents != 0)
             {
-                Debug.Log("can't place because there's no floor here");
-
                 return false;
             }
-
-            if (t == ToPlaceType.Platform)
-            {
-                //always allowed to put stuff on the bottom level
-                if (vec.y == 0) return true;
-
-                var undermevec = new Vector3(vec.x, vec.y - 5, vec.z);
-
-                var undermeidx = idxfromvec(undermevec);
-                var undermetile = board[undermeidx];
-                Debug.Log($"my vec is {vec} and undermevec is {undermevec}");
-                Debug.Log($"my idx is {idx} and under me idx is {undermeidx}" );
-                //can't place a floor above a stair
-                if ((undermetile.thingsIHave & (1 << (int) ToPlaceType.Stair)) != 0)
-                {
-                    Debug.Log("can't place because there's stair below this");
-                    return false;
-                }
-
-                if ((undermetile.thingsIHave & (1 << (int) ToPlaceType.Platform)) == 0)
-                {
-                    Debug.Log("can't place because there's no floor below this");
-                    return false;
-                }
-            }
-            
         }
-
-
-
-        return true;
+        //rule 3
+        var below = indexbelow(idx);
+        if (below == -1 || hastype(ToPlaceType.Platform, board[below].thingsIHave))
+        {
+            return true;
+        }
+        //rule 4
+        if (t == ToPlaceType.Stair && hastype(ToPlaceType.Stair, board[below].thingsIHave))
+        { 
+            if (diroftype(t, board[idx].thingOrientations) == diroftype(t, board[below].thingOrientations))
+            {
+                return true;
+            }
+        }
+        //rule 5
+        if (t == ToPlaceType.Platform && hastype(ToPlaceType.Stair, board[below].thingsIHave))
+        {
+            return true;
+        }
+        //rule 6
+        return false;
     }
-    
-    
 }
