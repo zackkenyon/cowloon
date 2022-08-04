@@ -33,6 +33,7 @@ public class Manager : MonoBehaviour
 {
     public static Manager Instance;
     public Transform[] prefabs;
+    public Transform[] ghostPrefabs;
     public Transform toPlace;
     public int toPlaceNum;
     public TMPro.TextMeshProUGUI Currenttextmesh;
@@ -62,6 +63,16 @@ public class Manager : MonoBehaviour
         {
             Instantiate(prefabs[(int)ToPlaceType.Platform], vecfromidx(i) - 5 * Vector3.up,Quaternion.identity);
         }
+
+        ghostPrefabs = new Transform[prefabs.Length];
+        for (int i=0; i< prefabs.Length; i++)
+        {
+            ghostPrefabs[i] = Instantiate(prefabs[i]);
+            StripTransform(ghostPrefabs[i]);
+            foreach (var r in ghostPrefabs[i].GetComponentsInChildren<Renderer>())
+                r.material = goodhighlight;
+        }
+        
     }
 
 
@@ -164,13 +175,34 @@ public class Manager : MonoBehaviour
             toPlaceDir++;
             toPlaceDir %= 4;
         }
-        cursorcube.transform.position = vecfromidx(cursoridx);
+
+        for (int i = 0; i < prefabs.Length; i++)
+        {
+            if (i == toPlaceNum)
+                ghostPrefabs[i].gameObject.SetActive(true);
+            else
+                ghostPrefabs[i].gameObject.SetActive(false);
+        }
+
+        ghostPrefabs[toPlaceNum].position = vecfromidx(cursoridx);
+        ghostPrefabs[toPlaceNum].rotation = rotFromInt(toPlaceDir);
+        
         var isOkToPlace = IsOKToPlace((ToPlaceType) toPlaceNum, cursoridx);
 
         if (isOkToPlace)
-            cursorcube.GetComponentInChildren<MeshRenderer>().material = goodhighlight;
+        {
+            foreach (var r in ghostPrefabs[toPlaceNum].GetComponentsInChildren<MeshRenderer>())
+            {
+                r.material = goodhighlight;
+            }
+        }
         else
-            cursorcube.GetComponentInChildren<MeshRenderer>().material = badhighlight;
+        {
+            foreach (var r in ghostPrefabs[toPlaceNum].GetComponentsInChildren<MeshRenderer>())
+            {
+                r.material = badhighlight;
+            }
+        }
 
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -270,5 +302,37 @@ public class Manager : MonoBehaviour
         }
         //rule 6
         return false;
+    }
+    
+    /// <summary>
+    /// Zack's vote for historically worst function
+    /// </summary>
+    /// <param name="g"></param>
+    public void StripTransform(Transform g)
+    {
+        var joints = g.GetComponentsInChildren<Joint>();
+        foreach (var r in joints)
+        {
+            DestroyImmediate(r);
+        }
+
+        var rbs = g.GetComponentsInChildren<Rigidbody>();
+        foreach (var r in rbs)
+        {
+            DestroyImmediate(r);
+        }
+
+        var cs = g.GetComponentsInChildren<Collider>();
+        foreach (var r in cs)
+        {
+            DestroyImmediate(r);
+        }
+        
+
+        foreach (var r in g.GetComponentsInChildren<AudioSource>())
+        {
+            DestroyImmediate(r);
+        }
+        
     }
 }
