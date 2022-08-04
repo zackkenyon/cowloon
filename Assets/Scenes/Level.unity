@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 3138039844899454643, guid: a5768547a1713424eaef18521e110a7c, type: 3}
+  - {fileID: 4656268957395201190, guid: 95ceaeea91d929745886748f3b220a48, type: 3}
   - {fileID: 8158923153485452570, guid: 7db45e55ab722f34dbbab5c4fd51d6ed, type: 3}
   - {fileID: 3404839248185953592, guid: d36086ccea2312640901d4334b2df4f0, type: 3}
   - {fileID: 7680977578462494281, guid: 472928b30744a3c4d8cc008fe3303b4f, type: 3}
@@ -1001,2057 +1001,2058 @@ MonoBehaviour:
   Currenttextmesh: {fileID: 1106186951}
   board:
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   - type: 0
-    dir: 0
     things: []
     thingsIHave: 0
+    thingOrientations: 0
   cursorcube: {fileID: 1946485471}
   cursoridx: 0
   goodhighlight: {fileID: 2100000, guid: bb816a2846ea31841a33e087c7b86e0a, type: 2}
   badhighlight: {fileID: 2100000, guid: 277b291dbfa872b468918f75337dae7a, type: 2}
+  toPlaceDir: 0
 --- !u!114 &963194230
 MonoBehaviour:
   m_ObjectHideFlags: 0
