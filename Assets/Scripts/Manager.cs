@@ -4,11 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
-
-public enum TileType
-{
-    Empty,Platform,Stair
-}
+using Sark.Pathfinding;
+using Unity.Mathematics;
+using Unity.Collections;
 
 public enum ToPlaceType
 {
@@ -22,10 +20,126 @@ public enum ToPlaceType
 [Serializable]
 public struct Tile
 {
-    public TileType type;
     public List<GameObject> things;
     public int thingsIHave;
     public int thingOrientations;
+}
+public struct Map : IPathingMap<int3>
+{
+    public static int3 N = new int3(0, 0, 1);
+    public static int3 S = new int3(0, 0, -1); 
+    public static int3 E = new int3(1, 0, 0);
+    public static int3 W = new int3(-1, 0, 0);
+    public static int3 U = new int3(0, 1, 0);
+    public static int3 D = new int3(0, -1, 0);
+
+    public NativeArray<Tile> board;
+    public void init()
+    {
+        board = new NativeArray<Tile>(512, Allocator.Persistent);
+    }
+    public int idxof(int3 pos)
+    {
+        return pos.x + pos.z << 3 + pos.y << 6;
+    }
+    public FixedList128Bytes<int3> getNeighbors(int3 pos)
+    {
+        var mylist = new FixedList128Bytes<int3>();
+        mylist.Add(pos + N);
+        mylist.Add(pos + E);
+        mylist.Add(pos + S);
+        mylist.Add(pos + W);
+        return mylist;
+    }
+    public void GetAvailableExits(int3 pos, NativeList<int3> output)
+    {
+
+        var me = board[idxof(pos)];
+        var stairint = Manager.typetoint(ToPlaceType.Stair);
+        if ((me.thingsIHave & stairint) != 0)
+        {
+            //Then I have a direction
+            var dir = Manager.diroftype(ToPlaceType.Stair, me.thingOrientations);
+            //0:x
+            //1:-z
+            //2:-x
+            //3:z
+            switch (dir)
+            {
+                case 0:
+                    if (IsValidExit(pos + U + E))
+                    {
+                        output.Add(pos + U + E);
+                    }
+                    if (IsValidExit(pos + W))
+                    {
+                        output.Add(pos + W);
+                    }
+                    return;
+                case 1:
+                    if (IsValidExit(pos + U + S))
+                    {
+                        output.Add(pos + U + S);
+                    }
+                    if (IsValidExit(pos + N))
+                    {
+                        output.Add(pos + N);
+                    }
+                    return;
+                case 2:
+                    if (IsValidExit(pos + U + W))
+                    {
+                        output.Add(pos + U + W);
+                    }
+                    if (IsValidExit(pos + E))
+                    {
+                        output.Add(pos + E);
+                    }
+                    return;
+                case 3:
+                    if (IsValidExit(pos + U + N))
+                    {
+                        output.Add(pos + U + N);
+                    }
+                    if (IsValidExit(pos + S))
+                    {
+                        output.Add(pos + S);
+                    }
+                    return;
+                default:
+                    break;
+            }
+        }
+        foreach (var neighbor in getNeighbors(pos))
+        {
+            //bounds checking
+            if (!IsValidExit(neighbor))
+            {
+                continue;
+            }
+            //TODO: do neighbors of platforms.
+
+
+        }
+    }
+
+    private bool IsValidExit(int3 neighbor)
+    {
+        //TOFIX: check for platforms and stairs
+        return math.all(neighbor < 8) && math.all(neighbor >= 0);
+    }
+
+    public int GetCost(int3 a, int3 b)
+    {
+        //TODO: Make sure that stairs cost 2.
+        return 1 + math.abs(a.y - b.y);
+    }
+
+
+    public float GetDistance(int3 a, int3 b)
+    {
+        return math.csum(math.abs(a - b));
+    }
 }
 
 
@@ -36,6 +150,7 @@ public class Manager : MonoBehaviour
     public Transform toPlace;
     public int toPlaceNum;
     public TMPro.TextMeshProUGUI Currenttextmesh;
+    public Map mymap;
     public Tile[] board = new Tile[512];
     public GameObject cursorcube;
     public int cursoridx;
@@ -62,21 +177,23 @@ public class Manager : MonoBehaviour
         {
             Instantiate(prefabs[(int)ToPlaceType.Platform], vecfromidx(i) - 5 * Vector3.up,Quaternion.identity);
         }
+        mymap.init();
     }
 
 
     Quaternion rotFromInt(int dir)
     {
+        //TO TEST: 0 means going up the stairs means going east, in the positive x direction.
         switch (dir)
         {
             case 0:
-                return Quaternion.LookRotation(Vector3.forward);
-            case 1:
                 return Quaternion.LookRotation(Vector3.right);
-            case 2:
+            case 1:
                 return Quaternion.LookRotation(-Vector3.forward);
-            case 3:
+            case 2:
                 return Quaternion.LookRotation(-Vector3.right);
+            case 3:
+                return Quaternion.LookRotation(Vector3.forward);
             default:
                 return default;
         }
@@ -196,9 +313,10 @@ public class Manager : MonoBehaviour
         board[idx].things.Add(thing.gameObject);
         board[idx].thingsIHave |= 1 << i;
         board[idx].thingOrientations |= dir << (2 * i);
+        mymap.board[idx]=board[idx];
     }
 
-    int indexbelow (int index)
+    public static int indexbelow (int index)
     {
         if (index >= 64)
         {
@@ -209,7 +327,7 @@ public class Manager : MonoBehaviour
             return -1;
         }
     }
-    int indexabove(int index)
+    public static int indexabove(int index)
     {
         if (index < 512 - 64) 
         {
@@ -220,18 +338,19 @@ public class Manager : MonoBehaviour
             return -1;
         }
     }
-    public int typetoint (ToPlaceType t)
+    public static int typetoint (ToPlaceType t)
     {
         return 1 << (int)t;
     }
-    public bool hastype(ToPlaceType t,int bitvec)
+    public static bool hastype(ToPlaceType t,int bitvec)
     {
         return (typetoint(t) & bitvec) != 0;
     }
-    public int diroftype(ToPlaceType t, int dirvec)
+    public static int diroftype(ToPlaceType t, int dirvec)
     {
         return  dirvec >> (2 * (int)t) & 3;
     }
+
     public bool IsOKToPlace(ToPlaceType t, int idx)
     {
         var squarecontents = board[idx].thingsIHave;
