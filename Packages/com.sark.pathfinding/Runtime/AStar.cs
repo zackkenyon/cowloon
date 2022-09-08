@@ -1,6 +1,6 @@
 ﻿using Unity.Collections;
 using Unity.Jobs;
-
+using UnityEngine;
 using Sark.Common.NativeListExtensions;
 using System;
 using Unity.Burst;
@@ -48,7 +48,7 @@ namespace Sark.Pathfinding
 
                 _neighbours.Clear();
                 map.GetAvailableExits(curr, _neighbours);
-
+          
                 for (int i = 0; i < _neighbours.Length; ++i)
                 {
                     var next = _neighbours[i];

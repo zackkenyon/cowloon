@@ -20,131 +20,16 @@ public enum ToPlaceType
 [Serializable]
 public struct Tile
 {
-    public List<GameObject> things;
+    public FixedList512Bytes<int> things;
     public int thingsIHave;
     public int thingOrientations;
-}
-public struct Map : IPathingMap<int3>
-{
-    public static int3 N = new int3(0, 0, 1);
-    public static int3 S = new int3(0, 0, -1); 
-    public static int3 E = new int3(1, 0, 0);
-    public static int3 W = new int3(-1, 0, 0);
-    public static int3 U = new int3(0, 1, 0);
-    public static int3 D = new int3(0, -1, 0);
-
-    public NativeArray<Tile> board;
-    public void init()
-    {
-        board = new NativeArray<Tile>(512, Allocator.Persistent);
-    }
-    public int idxof(int3 pos)
-    {
-        return pos.x + pos.z << 3 + pos.y << 6;
-    }
-    public FixedList128Bytes<int3> getNeighbors(int3 pos)
-    {
-        var mylist = new FixedList128Bytes<int3>();
-        mylist.Add(pos + N);
-        mylist.Add(pos + E);
-        mylist.Add(pos + S);
-        mylist.Add(pos + W);
-        return mylist;
-    }
-    public void GetAvailableExits(int3 pos, NativeList<int3> output)
-    {
-
-        var me = board[idxof(pos)];
-        var stairint = Manager.typetoint(ToPlaceType.Stair);
-        if ((me.thingsIHave & stairint) != 0)
-        {
-            //Then I have a direction
-            var dir = Manager.diroftype(ToPlaceType.Stair, me.thingOrientations);
-            //0:x
-            //1:-z
-            //2:-x
-            //3:z
-            switch (dir)
-            {
-                case 0:
-                    if (IsValidExit(pos + U + E))
-                    {
-                        output.Add(pos + U + E);
-                    }
-                    if (IsValidExit(pos + W))
-                    {
-                        output.Add(pos + W);
-                    }
-                    return;
-                case 1:
-                    if (IsValidExit(pos + U + S))
-                    {
-                        output.Add(pos + U + S);
-                    }
-                    if (IsValidExit(pos + N))
-                    {
-                        output.Add(pos + N);
-                    }
-                    return;
-                case 2:
-                    if (IsValidExit(pos + U + W))
-                    {
-                        output.Add(pos + U + W);
-                    }
-                    if (IsValidExit(pos + E))
-                    {
-                        output.Add(pos + E);
-                    }
-                    return;
-                case 3:
-                    if (IsValidExit(pos + U + N))
-                    {
-                        output.Add(pos + U + N);
-                    }
-                    if (IsValidExit(pos + S))
-                    {
-                        output.Add(pos + S);
-                    }
-                    return;
-                default:
-                    break;
-            }
-        }
-        foreach (var neighbor in getNeighbors(pos))
-        {
-            //bounds checking
-            if (!IsValidExit(neighbor))
-            {
-                continue;
-            }
-            //TODO: do neighbors of platforms.
-
-
-        }
-    }
-
-    private bool IsValidExit(int3 neighbor)
-    {
-        //TOFIX: check for platforms and stairs
-        return math.all(neighbor < 8) && math.all(neighbor >= 0);
-    }
-
-    public int GetCost(int3 a, int3 b)
-    {
-        //TODO: Make sure that stairs cost 2.
-        return 1 + math.abs(a.y - b.y);
-    }
-
-
-    public float GetDistance(int3 a, int3 b)
-    {
-        return math.csum(math.abs(a - b));
-    }
 }
 
 
 public class Manager : MonoBehaviour
 {
+    public static int idcounter=0;
+    public Dictionary<int, GameObject> allthings;
     public static Manager Instance;
     public Transform[] prefabs;
     public Transform[] ghostPrefabs;
@@ -155,11 +40,15 @@ public class Manager : MonoBehaviour
     public Tile[] board = new Tile[512];
     public GameObject cursorcube;
     public int cursoridx;
-
+    public int3 startnode;
+    public int3 endnode;
     [Header("Materials")]
     public Material goodhighlight;
     public Material badhighlight;
     public int toPlaceDir;
+    public AStar<int3> pathfinder;
+    public NativeList<int3> shortestpath;
+    public List<GameObject> pathcubes; 
     Manager()
     {
         if (Instance == null)
@@ -171,9 +60,26 @@ public class Manager : MonoBehaviour
             Debug.LogError("Tried to make two managers!");
         }
     }
+    private void OnDestroy()
+    {
+        mymap.board.Dispose();
+        shortestpath.Dispose();
+    }
     // Start is called before the first frame update
+
     void Start()
     {
+        for(int i = 0; i<100; i++)
+        {
+            pathcubes.Add(Instantiate(cursorcube));
+            pathcubes[i].GetComponentInChildren<Renderer>().material = badhighlight;
+            pathcubes[i].GetComponentInChildren<Renderer>().enabled = false;
+        }
+        startnode = new int3(-1, -1, -1);
+        endnode = new int3(-1, -1, -1);
+        pathfinder = new AStar<int3>(100, Allocator.Persistent);
+        shortestpath = new NativeList<int3>(100, Allocator.Persistent);
+        allthings = new Dictionary<int, GameObject>();
         for (int i = 0; i < 64; i++)
         {
             Instantiate(prefabs[(int)ToPlaceType.Platform], vecfromidx(i) - 5 * Vector3.up,Quaternion.identity);
@@ -244,6 +150,30 @@ public class Manager : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            startnode = Map.int3ofidx(cursoridx);
+        }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            endnode = Map.int3ofidx(cursoridx);
+        }
+        if (math.any(startnode != new int3(-1, -1, -1)) && math.any(endnode != new int3(-1, -1, -1)))
+        {
+            shortestpath.Length = 0;
+            pathfinder.Clear();
+            pathfinder.FindPath(mymap, startnode, endnode, shortestpath);
+            Debug.Log(shortestpath.Length);
+            foreach(var cube in pathcubes)
+            {
+                cube.GetComponentInChildren<Renderer>().enabled = false;
+            }
+            for (int i = 0; i < shortestpath.Length; i++)
+            {
+                pathcubes[i].transform.position = vecfromidx(Map.idxof(shortestpath[i]));
+                pathcubes[i].GetComponentInChildren<Renderer>().enabled = true;
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Comma))
         {
             if (yfromidx(cursoridx) + 1 < 8)
@@ -342,7 +272,8 @@ public class Manager : MonoBehaviour
     {
         var i = (int)t;
         var thing = Instantiate(prefabs[i], vecfromidx(idx), rotFromInt(dir));
-        board[idx].things.Add(thing.gameObject);
+        allthings.Add(++idcounter,thing.gameObject);
+        board[idx].things.Add(idcounter);
         board[idx].thingsIHave |= 1 << i;
         board[idx].thingOrientations |= dir << (2 * i);
         mymap.board[idx]=board[idx];
