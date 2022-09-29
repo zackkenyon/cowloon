@@ -33,6 +33,16 @@ public struct Map : IPathingMap<int3>
         mylist.Add(pos + W);
         return mylist;
     }
+
+    /// <summary>
+    /// Can walk sideways from stair to other stair if it would make geometric sense to do so.
+    /// as a corrolary, we must allow platforms and stairs to coexist. this means that transitions are hairy.
+    /// TODO: think hard about these problems, and write good pseudocode. 
+    /// 
+    /// This is not a graph, despite the evidence.
+    /// </summary>
+    /// <param name="pos"></param>
+    /// <param name="output"></param>
     public void GetAvailableExits(int3 pos, NativeList<int3> output)
     {
         var me = board[idxof(pos)];
@@ -42,7 +52,6 @@ public struct Map : IPathingMap<int3>
             //Then I have a direction
             var dir = Manager.diroftype(ToPlaceType.Stair, me.thingOrientations);
 
-            //TODO: Believe it or not, this is wrong 9/7/2022 The mesh thinks that the zero orientation is +z
             //0:x
             //1:-z
             //2:-x
